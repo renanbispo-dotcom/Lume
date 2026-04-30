@@ -70,12 +70,8 @@
     flex: 1;
     margin-left: 0;
     overflow: hidden;
-<<<<<<< HEAD
     object-fit: contain;
     max-height: 99.9vh;
-=======
-    max-height: 100vh;
->>>>>>> base-teste
 }
 
 .imagem-experiencia img {
