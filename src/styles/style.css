@@ -1,11 +1,265 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
     background-color: #EFEBE9;
     font-family: 'Noto Sans Georgian', sans-serif;
-=======
-    
->>>>>>> base-teste
+}
+
+
+.apresenta_inicio {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    background-color: #ede4dc;
+}
+
+#apresentacao {
+    color: #5D4037;
+    font-family: Georgia;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 5.625rem;
+    width: 38rem;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+#apresenta_desc {
+    color: rgba(62, 39, 35, 0.70);
+    font-family: Montserrat;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.03125rem;
+    width: 38rem;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+.apresenta_inicio>.btn {
+    justify-self: start;
+    margin-top: 2rem;
+}
+
+#img_brinde {
+    grid-column: 2;
+    grid-row: 1 / 4;
+}
+
+
+#img_brinde img {
+    display: block;
+    width: min(32rem, 100%);
+    height: 31.25rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 20px;
+}
+
+#titulo_dif {
+    color: #5D4037;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3rem;
+    margin-top: 65px;
+}
+
+.lista_diferenciais {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: min(100%, 72rem);
+    margin: 3rem auto 0;
+    padding: 0 2rem 8rem;
+    list-style: none;
+}
+
+.lista_diferenciais li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 13rem;
+    max-width: 16rem;
+    text-align: center;
+}
+
+.lista_diferenciais img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 2097150rem;
+    background: rgba(93, 64, 55, 0.10);
+}
+
+.lista_diferenciais .p_titulo {
+    color: #5D4037;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.lista_diferenciais .p_desc {
+    color: rgba(62, 39, 35, 0.70);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem;
+}
+
+#avalia {
+    background: #F8F5F2;
+    padding: 4.75rem 2rem 5rem;
+}
+
+#titulo_aval {
+    color: #5D4037;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+.avaliacoes_cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: min(100%, 80rem);
+    margin: 0 auto;
+}
+
+.avalia-card {
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 25.5rem;
+    min-height: 16rem;
+    padding: 2rem;
+}
+
+.estrelas {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.estrelas img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.comentario {
+    color: rgba(62, 39, 35, 0.80);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.625rem;
+    width: 100%;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(93, 64, 55, 0.12);
+}
+
+.cliente {
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+.autor {
+    color: #5D4037;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.cargo {
+    color: rgba(62, 39, 35, 0.60);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+
+@media (max-width: 900px) {
+    .apresenta_inicio {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    #img_brinde {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #img_brinde img {
+        width: 100%;
+        height: auto;
+    }
+
+    .lista_diferenciais {
+        flex-wrap: wrap;
+        gap: 2.5rem 1.5rem;
+    }
+
+    .avaliacoes_cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 560px) {
+    .lista_diferenciais {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.5rem;
+    }
+
+    .lista_diferenciais li {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    #avalia {
+        padding: 3.5rem 1.5rem;
+    }
+
+    #titulo_aval {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .avalia-card {
+        max-width: 100%;
+    }
 }
