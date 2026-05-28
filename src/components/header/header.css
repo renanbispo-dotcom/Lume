@@ -1,180 +1,134 @@
 header {
-  background: var(--white, #FFFFFF);
-  border-bottom: 1px solid var(--border, #DDD3C5);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    width: 100%;
+    padding: 1rem 2%;
+    box-sizing: border-box;
+    position: relative;
 }
 
-
-nav.logo {
-  width: 100%;
-  padding: 0 2.5rem;
-  height: 64px;
-  display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr) auto;
-  align-items: center;
-  column-gap: 1rem;
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-left: 8rem;
 }
-
-
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  grid-column: 1 / 3;
-  justify-self: start;
-}
-
 
 .logoIcon {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  grid-column: 1;
-  justify-self: start;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+}
+
+.logoNome {
+    color: #5D4037;
+    text-align: center;
+    font-family: "Noto Sans Georgian";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.25rem;
+    padding-left: 2rem;
+}
+
+.opcoes {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 1.97rem;
+    align-items: center;
+}
+
+.item a {
+    color: #5D4037;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.02188rem;
+    text-decoration: none;
 }
 
 
-nav.logo h1.logoNome {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--espresso, #3B2314);
-  letter-spacing: 0.02em;
-  flex-shrink: 0;
-  margin-right: 0.75rem;
-  grid-column: 2;
-  justify-self: start;
+.item-btn {
+
+    position: absolute;
+    right: 4rem;
 }
 
+
+.item {
+    white-space: nowrap;
+}
 
 .menu-hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-  margin-left: auto;
-}
-
-.menu-hamburger img {
-  width: 24px;
-  height: 24px;
-}
-
-.menu-hamburger svg {
-  width: 24px;
-  height: 24px;
-}
-
-
-ul.opcoes {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  grid-column: 3;
-  justify-self: center;
-}
-
-ul.opcoes li.item a {
-  text-decoration: none;
-  font-size: 0.9rem;
-  color: var(--text-muted, #7A6354);
-  font-weight: 400;
-  transition: color 0.2s;
-}
-
-ul.opcoes li.item a:hover,
-ul.opcoes li.item a.active {
-  color: var(--espresso, #3B2314);
-  font-weight: 500;
-}
-
-/* Register button alinhado ao lado direito da nav no desktop */
-button.btn.item-btn {
-  background: var(--espresso, #3B2314);
-  color: var(--white, #FFFFFF);
-  border: none;
-  padding: 0.55rem 1.3rem;
-  border-radius: 8px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  grid-column: 4;
-  justify-self: end;
-  transition: background 0.2s, transform 0.1s;
-  flex-shrink: 0;
-}
-
-button.btn.item-btn:hover {
-  background: var(--mocha, #6B3F2A);
-}
-
-button.btn.item-btn:active {
-  transform: scale(0.98);
-}
-
-@media (max-width: 412px) {
-  nav.logo {
-    padding: 0 1.2rem;
-    height: auto;
-    min-height: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .nav-brand {
-    flex: 1;
-  }
-
-  .menu-hamburger {
-    display: flex;
-    align-items: center;
-  }
-
-  ul.opcoes {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    gap: 0;
-    background: var(--white, #FFFFFF);
-    border-top: 1px solid var(--border, #DDD3C5);
-    padding: 0.5rem 0 0.75rem;
-  }
+}
 
-  ul.opcoes.open,
-  ul.opcoes.active {
-    display: flex;
-  }
+@media (max-width: 490px) {
 
-  ul.opcoes li.item {
-    width: 100%;
-  }
+    .logo {
+        justify-content: space-between;
+        padding-left: 0;
+    }
 
-  ul.opcoes li.item a {
-    display: block;
-    padding: 0.7rem 1.2rem;
-    font-size: 0.95rem;
-  }
 
-  button.btn.item-btn {
-    display: none;
-  }
+    header {
+        padding: 1rem 2rem;
+    }
 
-  nav.logo.menu-open button.btn.item-btn,
-  nav.logo:has(ul.opcoes.open) button.btn.item-btn,
-  nav.logo:has(ul.opcoes.active) button.btn.item-btn {
-    display: inline-flex;
-    width: 100%;
-    margin: 0 0 1rem;
-    justify-content: center;
-  }
+    .menu-hamburger {
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .opcoes {
+        display: block;
+        position: absolute;
+        width: 70%;
+        top: 70px;
+        left: auto;
+        right: 0;
+        background: #F8F5F2;
+        transition: 0.5s;
+        z-index: 1000;
+        height: calc(100vh - 70px);
+        border-bottom: 1px solid #5D4037;
+        transform: translateX(100%);
+    }
+
+    #menu-opcoes.active {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        border-bottom: 2px solid #5D4037;
+        transform: translateX(0);
+    }
+
+    .opcoes li {
+        padding: 1rem 0;
+        margin: 0 2rem;
+        border-bottom: 1px solid rgba(93, 64, 55, 0.1);
+    }
+
+    .opcoes li a {
+        font-size: 1.2rem;
+        display: block;
+    }
+
+
+
+    .item-btn {
+        display: none;
+    }
+
 
 }
