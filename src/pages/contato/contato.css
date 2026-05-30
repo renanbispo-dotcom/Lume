@@ -1,0 +1,88 @@
+:root {
+    color-scheme: dark;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4ede6;
+    font-family: 'Montserrat', sans-serif;
+    color: #2f2f2f;
+}
+
+.contato-container {
+    padding: 4rem 1.5rem 3rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.contato-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding-top: 3rem;
+}
+
+.contato-section h1 {
+    font-size: clamp(2.75rem, 4vw, 4rem);
+    font-family: Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #2c1f18;
+}
+
+.contatos-grid {
+    width: min(100%, 40rem);
+    display: grid;
+    gap: 1.25rem;
+}
+
+.contato-card {
+    min-height: 5.5rem;
+    border-radius: 2.5rem;
+    display: grid;
+    place-items: center;
+    padding: 0 1.5rem;
+    box-shadow: 0 24px 68px rgba(51, 35, 22, 0.12);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contato-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 80px rgba(51, 35, 22, 0.18);
+}
+
+.gradient-magenta {
+    background: linear-gradient(135deg, #ffbe3d 0%, #d06eff 45%, #8b57ff 100%);
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #d5f3dc 0%, #7ddc64 45%, #108618 100%);
+}
+
+.gradient-rainbow {
+    background: linear-gradient(135deg, #2b79ff 0%, #f24f3b 45%, #1dbb6c 100%);
+}
+
+.gradient-steel {
+    background: linear-gradient(135deg, #7b7e84 0%, #3a5d9e 45%, #215693 100%);
+}
+
+@media (max-width: 520px) {
+    .contato-section {
+        padding-top: 2rem;
+    }
+
+    .contatos-grid {
+        width: 100%;
+    }
+
+    .contato-card {
+        min-height: 5rem;
+        font-size: 1.15rem;
+    }
+}
