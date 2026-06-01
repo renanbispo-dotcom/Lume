@@ -16,23 +16,38 @@
     <main>
         <header>
             <nav class="logo">
-                <img class="logoIcon" src="src/assets/images/icon.svg" alt="">
+
+                <!-- Logo icon: inline SVG (substitui o src="../../assets/images/icon.svg") -->
+                <svg class="logoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path d="M7 10h18l-2 13H9L7 10Z" stroke="#3B2314" stroke-width="1.6" stroke-linejoin="round" />
+                    <path d="M22 13h3a3 3 0 0 1 0 6h-3" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round" />
+                    <path d="M10 7c0-2 2-2 2-4M15 7c0-2 2-2 2-4" stroke="#3B2314" stroke-width="1.4"
+                        stroke-linecap="round" />
+                    <line x1="7" y1="23" x2="25" y2="23" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+
                 <h1 class="logoNome">Lume</h1>
 
-                <button class="menu-hamburger" id="btn-mobile">
-                    <img src="src/assets/images/menu hamburguers.svg" alt="Abrir Menu">
+
+                <button class="menu-hamburger" id="btn-mobile" aria-label="Abrir Menu" aria-expanded="false"
+                    aria-controls="menu-opcoes">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B2314" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
                 </button>
 
                 <ul class="opcoes" id="menu-opcoes">
-                    <li class="item"> <a href="index.html">Início</a></li>
-                    <li class="item"> <a href="src/pages/cardapio/cardapio.html">Cardápio</a></li>
-                    <li class="item"> <a href="pages/nossa-historia/nossa-historia.html">Nossa História</a></li>
-                    <li class="item"> <a href="src/pages/contato/contato.html">Contato</a></li>
+                    <li class="item"><a href="index.html">Início</a></li>
+                    <li class="item"><a href="src/pages/cardapio/cardapio.html" class="active">Cardápio</a></li>
+                    <li class="item"><a href="src/pages/nossa-historia/nossa-historia.html">Nossa História</a></li>
+                    <li class="item"><a href="src/pages/contato/contato.html">Contato</a></li>
                 </ul>
 
                 <a href="src/pages/login/login.html" class="btn item-btn">Login</a>
-
-
             </nav>
         </header>
 
@@ -40,7 +55,7 @@
             <h1 id="apresentacao">Café Artesanal de Excelência</h1>
             <p id="apresenta_desc">Descubra sabores únicos em cada xícara. Grãos selecionados, torra artesanal e um
                 ambiente elegante para momentos especiais.</p>
-            <button type="submit" class="btn">Cadastre-se</button>
+            <a href="src/pages/cadastro/cadastro.html" class="btn">Cadastre-se</a>
             <div id="img_brinde">
                 <img src="src/assets/images/ImageWithFallback.svg" alt="">
 
@@ -50,28 +65,28 @@
         <section class="diferencial_aval">
             <div id="diferencial">
                 <h2 id="titulo_dif">Nossos diferenciais</h2>
-               <ol class="lista_diferenciais">
-                <li>
-                    <img src="src/assets/images/icons/selo.svg" alt="">
-                    <p class="p_titulo">Grãos Selecionados</p>
-                    <p class="p_desc">Café 100% arábica de fazendas premiadas do Brasil e Colômbia</p>
-                </li>
-                <li>
-                    <img src="src/assets/images/icons/coracao.svg" alt="">
-                    <p class="p_titulo">Torra Artesanal</p>
-                    <p class="p_desc">Processo cuidadoso que realça o sabor único de cada origem</p>
-                </li>
-                <li>
-                    <img src="src/assets/images/icons/relogio.svg" alt="">
-                    <p class="p_titulo">Frescor garantido</p>
-                    <p class="p_desc">Torrado sob demanda para máxima frescura e aroma</p>
-                </li>
-                <li>
-                    <img src="src/assets/images/icons/local.svg" alt="">
-                    <p class="p_titulo">Experiência Única</p>
-                    <p class="p_desc">Ambiente acolhedor para apreciar cada xícara</p>
-                </li>
-               </ol>
+                <ol class="lista_diferenciais">
+                    <li>
+                        <img src="src/assets/images/icons/selo.svg" alt="">
+                        <p class="p_titulo">Grãos Selecionados</p>
+                        <p class="p_desc">Café 100% arábica de fazendas premiadas do Brasil e Colômbia</p>
+                    </li>
+                    <li>
+                        <img src="src/assets/images/icons/coracao.svg" alt="">
+                        <p class="p_titulo">Torra Artesanal</p>
+                        <p class="p_desc">Processo cuidadoso que realça o sabor único de cada origem</p>
+                    </li>
+                    <li>
+                        <img src="src/assets/images/icons/relogio.svg" alt="">
+                        <p class="p_titulo">Frescor garantido</p>
+                        <p class="p_desc">Torrado sob demanda para máxima frescura e aroma</p>
+                    </li>
+                    <li>
+                        <img src="src/assets/images/icons/local.svg" alt="">
+                        <p class="p_titulo">Experiência Única</p>
+                        <p class="p_desc">Ambiente acolhedor para apreciar cada xícara</p>
+                    </li>
+                </ol>
             </div>
 
             <div id="avalia">
@@ -86,7 +101,8 @@
                             <img src="src/assets/images/icons/estrela.svg" alt="">
                             <img src="src/assets/images/icons/estrela.svg" alt="">
                         </div>
-                        <h4 class="comentario">"O melhor café que já experimentei. A qualidade é incomparável e o ambiente perfeito para reuniões."</h4>
+                        <h4 class="comentario">"O melhor café que já experimentei. A qualidade é incomparável e o
+                            ambiente perfeito para reuniões."</h4>
                         <div class="cliente">
                             <p class="autor">Maria Silva</p>
                             <p class="cargo">CEO, TechCorp</p>
@@ -101,7 +117,8 @@
                             <img src="src/assets/images/icons/estrela.svg" alt="">
                             <img src="src/assets/images/icons/estrela.svg" alt="">
                         </div>
-                        <h4 class="comentario">"Descobri este lugar durante uma viagem de negócios. Agora é parada obrigatória sempre que estou na cidade."</h4>
+                        <h4 class="comentario">"Descobri este lugar durante uma viagem de negócios. Agora é parada
+                            obrigatória sempre que estou na cidade."</h4>
                         <div class="cliente">
                             <p class="autor">John Patterson</p>
                             <p class="cargo">Empresário</p>
@@ -116,7 +133,8 @@
                             <img src="src/assets/images/icons/estrela.svg" alt="">
                             <img src="src/assets/images/icons/estrela.svg" alt="">
                         </div>
-                        <h4 class="comentario">"Café excepcional e atendimento impecável. Recomendo para todos os apreciadores de café premium."</h4>
+                        <h4 class="comentario">"Café excepcional e atendimento impecável. Recomendo para todos os
+                            apreciadores de café premium."</h4>
                         <div class="cliente">
                             <p class="autor">Ana Costa</p>
                             <p class="cargo">Diretora de Marketing</p>
@@ -128,7 +146,8 @@
 
         <section class="newsletter">
             <h2 class="newsletter_titulo">Receba Novidades e Ofertas Exclusivas</h2>
-            <p class="newsletter_desc">Assine nossa newsletter e fique por dentro dos lançamentos e eventos especiais</p>
+            <p class="newsletter_desc">Assine nossa newsletter e fique por dentro dos lançamentos e eventos especiais
+            </p>
 
             <form class="newsletter_form">
                 <input type="email" placeholder="Seu melhor e-mail" aria-label="Seu melhor e-mail">

@@ -115,6 +115,10 @@ body {
 }
 
 @media (max-width: 700px) {
+    .cadastro-nav {
+        padding: 0.875rem 1rem;
+    }
+
     .cadastro-page {
         align-items: flex-start;
         min-height: calc(100vh - 5rem);
@@ -126,11 +130,13 @@ body {
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 420px) {
     .cadastro-nav {
-        padding-left: 0;
+        padding: 0.75rem;
     }
+}
 
+@media (max-width: 490px) {
     .cadastro-page {
         padding-top: 1.25rem;
     }

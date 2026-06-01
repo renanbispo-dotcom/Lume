@@ -14,26 +14,37 @@
 
 <body>
     <header>
-        <nav class="logo cadastro-nav">
-            <a class="nav-brand" href="../../../index.html" aria-label="Café Artesanal">
-                <img class="logoIcon" src="../../assets/images/icon.svg" alt="">
-                <h1 class="logoNome">Café Artesanal</h1>
-            </a>
+    <nav class="logo">
 
-            <button class="menu-hamburger" id="btn-mobile" type="button" aria-label="Abrir menu">
-                <img src="../../assets/images/menu hamburguers.svg" alt="">
-            </button>
+      <!-- Logo icon: inline SVG (substitui o src="../../assets/images/icon.svg") -->
+      <svg class="logoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 10h18l-2 13H9L7 10Z" stroke="#3B2314" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M22 13h3a3 3 0 0 1 0 6h-3" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M10 7c0-2 2-2 2-4M15 7c0-2 2-2 2-4" stroke="#3B2314" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="7" y1="23" x2="25" y2="23" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
 
-            <ul class="opcoes" id="menu-opcoes">
-                <li class="item"><a href="../../../index.html">Início</a></li>
-                <li class="item"><a href="../cardapio/cardapio.html">Cardápio</a></li>
-                <li class="item"><a href="../nossa-historia/nossa-historia.html">Nossa História</a></li>
-                <li class="item"><a href="../contato/contato.html">Contato</a></li>
-            </ul>
+      <h1 class="logoNome">Lume</h1>
 
-            <a href="cadastro.html" class="btn item-btn">Cadastre-se</a>
-        </nav>
-    </header>
+      
+      <button class="menu-hamburger" id="btn-mobile" aria-label="Abrir Menu" aria-expanded="false" aria-controls="menu-opcoes">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B2314" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <ul class="opcoes" id="menu-opcoes">
+        <li class="item"><a href="../../../index.html">Início</a></li>
+        <li class="item"><a href="../cardapio/cardapio.html" class="active">Cardápio</a></li>
+        <li class="item"><a href="../nossa-historia/nossa-historia.html">Nossa História</a></li>
+        <li class="item"><a href="../contato/contato.html">Contato</a></li>
+      </ul>
+
+      <a href="../login/login.html" class="btn item-btn">Login</a>
+    </nav>
+  </header>
 
     <main class="cadastro-page">
         <section class="cadastro-card" aria-label="Formulario de cadastro">

@@ -1,1 +1,257 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: #F8F5F2;
+    color: #5D4037;
+    font-family: Montserrat, sans-serif;
+}
+
+.reserva-nav {
+    width: min(100%, 72rem);
+    padding: 0.9rem 2rem;
+}
+
+.reserva-nav .nav-brand {
+    text-decoration: none;
+}
+
+.reserva-nav .logoIcon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.reserva-nav .logoNome {
+    font-family: Georgia, serif;
+    font-size: 1.45rem;
+    line-height: 1.75rem;
+}
+
+.reserva-nav .item a {
+    font-size: 0.8rem;
+}
+
+.reserva-nav .item-btn {
+    border-radius: 0.45rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+}
+
+.reserva-page {
+    min-height: calc(100vh - 4.75rem);
+    padding: 1rem 1.5rem 3.5rem;
+}
+
+.reserva-hero {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.reserva-hero h2 {
+    margin: 0 0 0.65rem;
+    color: #5D4037;
+    font-family: Georgia, serif;
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.reserva-hero p {
+    margin: 0 0 2rem;
+    color: rgba(62, 39, 35, 0.62);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.reserva-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.reserva-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 11rem;
+    min-height: 2.9rem;
+    padding: 0.75rem 1.35rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.reserva-action-light {
+    background: #FFFFFF;
+    color: rgba(62, 39, 35, 0.66);
+}
+
+.reserva-action-active {
+    background: #5D4037;
+    color: #FFFFFF;
+}
+
+.reserva-action:hover {
+    transform: translateY(-1px);
+}
+
+.reserva-card {
+    width: min(100%, 38.5rem);
+    margin: 0 auto;
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 0.625rem;
+    box-shadow: 0 1rem 2.25rem rgba(62, 39, 35, 0.14);
+}
+
+.reserva-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #5D4037;
+    font-size: 0.86rem;
+    font-weight: 500;
+    line-height: 1.15rem;
+}
+
+.campo label svg {
+    color: rgba(62, 39, 35, 0.68);
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    border: 1px solid rgba(93, 64, 55, 0.18);
+    border-radius: 0.45rem;
+    background: #EFEBE9;
+    color: #5D4037;
+    font: inherit;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.campo input {
+    height: 2.75rem;
+    padding: 0 0.9rem;
+}
+
+.campo textarea {
+    min-height: 5.75rem;
+    resize: vertical;
+    padding: 0.9rem;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: rgba(93, 64, 55, 0.38);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: rgba(93, 64, 55, 0.55);
+    background: #FFFFFF;
+}
+
+.reserva-submit {
+    width: 100%;
+    min-height: 3.1rem;
+    margin-top: 0.2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: #5D4037;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.reserva-submit:hover {
+    background: #4C332C;
+    transform: translateY(-1px);
+}
+
+.reserva-submit:active {
+    transform: translateY(0);
+}
+
+.reserva-note {
+    margin: -0.2rem 0 0;
+    color: rgba(62, 39, 35, 0.42);
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .reserva-nav {
+        padding: 0.875rem 1rem;
+    }
+
+    .reserva-page {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    .reserva-hero h2 {
+        font-size: 2.25rem;
+    }
+
+    .reserva-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .reserva-actions {
+        width: min(100%, 22rem);
+        margin: 0 auto;
+    }
+
+    .reserva-action {
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .reserva-nav {
+        padding: 0.75rem;
+    }
+
+    .reserva-hero h2 {
+        font-size: 2rem;
+    }
+}

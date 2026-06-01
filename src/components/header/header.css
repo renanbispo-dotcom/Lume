@@ -3,6 +3,7 @@ header {
     box-sizing: border-box;
     background: #ffffff;
     border-bottom: 1px solid rgba(93, 64, 55, 0.12);
+    position: relative;
     z-index: 10;
 }
 
@@ -74,63 +75,137 @@ header {
     display: none;
 }
 
-@media (max-width: 490px) {
-
+@media (max-width: 900px) {
     .logo {
-        justify-content: space-between;
-        padding-left: 0;
+        gap: 1rem;
+        padding: 0.875rem 1.25rem;
     }
 
-
-    header {
-        padding: 1rem 2rem;
+    .logoIcon {
+        width: 2rem;
+        height: 2rem;
     }
 
-    .menu-hamburger {
-        display: block;
-        border: none;
-        background: none;
-        cursor: pointer;
+    .logoNome {
+        font-size: 1.9rem;
+        line-height: 2.15rem;
     }
 
     .opcoes {
-        display: block;
+        gap: 1.25rem;
+    }
+
+    .item a {
+        font-size: 0.85rem;
+    }
+
+    .item-btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .logo {
+        justify-content: space-between;
+        padding: 0.875rem 1rem;
+        position: relative;
+    }
+
+    .logoNome {
+        font-size: 1.55rem;
+        line-height: 1.8rem;
+    }
+
+    .menu-hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    .menu-hamburger img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .opcoes {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
         position: absolute;
-        width: 70%;
-        top: 70px;
-        left: auto;
-        right: 0;
+        width: min(20rem, calc(100vw - 2rem));
+        top: calc(100% + 0.75rem);
+        right: 1rem;
         background: #F8F5F2;
-        transition: 0.5s;
+        border: 1px solid rgba(93, 64, 55, 0.12);
+        border-radius: 0.5rem;
+        box-shadow: 0 1rem 2rem rgba(62, 39, 35, 0.12);
+        gap: 0;
+        margin: 0;
+        padding: 0.5rem 0;
         z-index: 1000;
-        height: calc(100vh - 70px);
-        border-bottom: 1px solid #5D4037;
-        transform: translateX(100%);
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-0.5rem);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     }
 
     #menu-opcoes.active {
-        height: calc(100vh - 70px);
         visibility: visible;
-        border-bottom: 2px solid #5D4037;
-        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 
     .opcoes li {
-        padding: 1rem 0;
-        margin: 0 2rem;
+        padding: 0;
+        margin: 0;
         border-bottom: 1px solid rgba(93, 64, 55, 0.1);
     }
 
-    .opcoes li a {
-        font-size: 1.2rem;
-        display: block;
+    .opcoes li:last-child {
+        border-bottom: 0;
     }
 
-
+    .opcoes li a {
+        font-size: 1rem;
+        display: block;
+        padding: 0.9rem 1rem;
+        text-align: left;
+    }
 
     .item-btn {
         display: none;
     }
+}
 
+@media (max-width: 420px) {
+    .logo {
+        padding: 0.75rem;
+    }
+
+    .logoIcon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .logoNome {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .opcoes {
+        right: 0.75rem;
+        width: calc(100vw - 1.5rem);
+    }
 
 }

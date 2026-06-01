@@ -1,8 +1,12 @@
 const btnMobile = document.getElementById('btn-mobile');
+const nav = document.getElementById('menu-opcoes');
 
 function toggleMenu () {
-    const nav = document.getElementById('menu-opcoes');
     nav.classList.toggle('active');
+    btnMobile.setAttribute('aria-expanded', nav.classList.contains('active'));
 }
 
-btnMobile.addEventListener('click', toggleMenu)
+if (btnMobile && nav) {
+    btnMobile.setAttribute('aria-expanded', 'false');
+    btnMobile.addEventListener('click', toggleMenu);
+}
