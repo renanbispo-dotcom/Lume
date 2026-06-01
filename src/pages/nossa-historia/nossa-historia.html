@@ -13,24 +13,35 @@
 
 <body>
     <header>
-        <nav class="logo">
-            <img class="logoIcon" src="../../assets/images/icon.svg" alt="">
-            <h1 class="logoNome">Lume</h1>
+    <nav class="logo">
 
-            <button class="menu-hamburger" id="btn-mobile">
-                <img src="../../assets/images/menu hamburguers.svg" alt="Abrir Menu">
-            </button>
+    
+      <div class="nav-brand">
+        <svg class="logoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 10h18l-2 13H9L7 10Z" stroke="#3B2314" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M22 13h3a3 3 0 0 1 0 6h-3" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M10 7c0-2 2-2 2-4M15 7c0-2 2-2 2-4" stroke="#3B2314" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="7" y1="23" x2="25" y2="23" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h1 class="logoNome">Lume</h1>
+      </div>
 
-            <ul class="opcoes" id="menu-opcoes">
-                <li class="item"> <a href="../../index.html">Início</a></li>
-                <li class="item"> <a href="../cardapio/cardapio.html">Cardápio</a></li>
-                <li class="item"> <a href="nossa-historia.html">Nossa História</a></li>
-                <li class="item"> <a href="../contato/contato.html">Contato</a></li>
-            </ul>
+      
+      <button class="menu-hamburger" id="btn-mobile" aria-label="Abrir Menu" aria-expanded="false" aria-controls="menu-opcoes">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B2314" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
 
-            <button type="submit" class="btn item-btn">Cadastre-se</button>
-        </nav>
-    </header>
+      <ul class="opcoes" id="menu-opcoes">
+        <li class="item"><a href="../../../index.html">Início</a></li>
+        <li class="item"><a href="../cardapio/cardapio.html" class="active">Cardápio</a></li>
+        <li class="item"><a href="../nossa-historia/nossa-historia.html">Nossa História</a></li>
+        <li class="item"><a href="../contato/contato.html">Contato</a></li>
+    </nav>
+  </header>
 
     <main class="container-historia">
         <section class="historia-section">
