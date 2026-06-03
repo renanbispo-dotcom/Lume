@@ -9,6 +9,7 @@
 
 .apresenta_inicio {
     display: grid;
+    grid-template-columns: minmax(0, 38rem) minmax(18rem, 32rem);
     align-items: center;
     justify-content: center;
     gap: 3rem;
@@ -53,7 +54,8 @@
 
 #img_brinde img {
     display: block;
-    width: min(32rem, 100%);
+    width: 100%;
+    max-width: 32rem;
     height: 31.25rem;
     object-fit: cover;
     flex-shrink: 0;
@@ -353,16 +355,36 @@
     .apresenta_inicio {
         grid-template-columns: 1fr;
         min-height: auto;
+        justify-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    #apresentacao {
+        font-size: 3.25rem;
+        line-height: 3.85rem;
+        width: min(100%, 42rem);
+    }
+
+    #apresenta_desc {
+        width: min(100%, 38rem);
+    }
+
+    .apresenta_inicio>.btn {
+        justify-self: center;
+        margin-top: 0;
     }
 
     #img_brinde {
         grid-column: 1;
         grid-row: auto;
+        width: min(100%, 34rem);
     }
 
     #img_brinde img {
         width: 100%;
         height: auto;
+        max-height: 28rem;
     }
 
     .lista_diferenciais {
@@ -381,10 +403,38 @@
 }
 
 @media (max-width: 560px) {
+    .apresenta_inicio {
+        padding: 2.5rem 1.25rem;
+        gap: 1.5rem;
+    }
+
+    #apresentacao {
+        font-size: 2.35rem;
+        line-height: 2.85rem;
+    }
+
+    #apresenta_desc {
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+
+    #img_brinde img {
+        max-height: none;
+        aspect-ratio: 4 / 3;
+    }
+
+    #titulo_dif {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        margin-top: 3rem;
+        padding: 0 1.25rem;
+    }
+
     .lista_diferenciais {
         flex-direction: column;
         align-items: center;
         padding: 0 1.5rem;
+        margin-top: 2rem;
     }
 
     .lista_diferenciais li {

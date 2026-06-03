@@ -21,6 +21,7 @@ header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-shrink: 0;
 }
 
 .logoIcon {
@@ -66,6 +67,10 @@ header {
     margin-left: auto;
 }
 
+.mobile-login {
+    display: none;
+}
+
 
 .item {
     white-space: nowrap;
@@ -77,8 +82,10 @@ header {
 
 @media (max-width: 900px) {
     .logo {
+        justify-content: space-between;
         gap: 1rem;
-        padding: 0.875rem 1.25rem;
+        padding: 0.875rem 1rem;
+        position: relative;
     }
 
     .logoIcon {
@@ -89,33 +96,6 @@ header {
     .logoNome {
         font-size: 1.9rem;
         line-height: 2.15rem;
-    }
-
-    .opcoes {
-        gap: 1.25rem;
-    }
-
-    .item a {
-        font-size: 0.85rem;
-    }
-
-    .item-btn {
-        padding: 0.65rem 1.25rem;
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 720px) {
-
-    .logo {
-        justify-content: space-between;
-        padding: 0.875rem 1rem;
-        position: relative;
-    }
-
-    .logoNome {
-        font-size: 1.55rem;
-        line-height: 1.8rem;
     }
 
     .menu-hamburger {
@@ -183,8 +163,33 @@ header {
         text-align: left;
     }
 
+    .mobile-login {
+        display: block;
+    }
+
+    .opcoes li.mobile-login a {
+        margin: 0.5rem 1rem;
+        padding: 0.8rem 1rem;
+        border-radius: 0.5rem;
+        background: #5B463D;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
     .item-btn {
         display: none;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .logo {
+        padding: 0.875rem 1rem;
+    }
+
+    .logoNome {
+        font-size: 1.55rem;
+        line-height: 1.8rem;
     }
 }
 

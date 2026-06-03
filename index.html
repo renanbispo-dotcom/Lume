@@ -17,17 +17,19 @@
         <header>
             <nav class="logo">
 
-                <!-- Logo icon: inline SVG (substitui o src="../../assets/images/icon.svg") -->
-                <svg class="logoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M7 10h18l-2 13H9L7 10Z" stroke="#3B2314" stroke-width="1.6" stroke-linejoin="round" />
-                    <path d="M22 13h3a3 3 0 0 1 0 6h-3" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M10 7c0-2 2-2 2-4M15 7c0-2 2-2 2-4" stroke="#3B2314" stroke-width="1.4"
-                        stroke-linecap="round" />
-                    <line x1="7" y1="23" x2="25" y2="23" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
+                <div class="nav-brand">
+                    <!-- Logo icon: inline SVG (substitui o src="../../assets/images/icon.svg") -->
+                    <svg class="logoIcon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M7 10h18l-2 13H9L7 10Z" stroke="#3B2314" stroke-width="1.6" stroke-linejoin="round" />
+                        <path d="M22 13h3a3 3 0 0 1 0 6h-3" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round" />
+                        <path d="M10 7c0-2 2-2 2-4M15 7c0-2 2-2 2-4" stroke="#3B2314" stroke-width="1.4"
+                            stroke-linecap="round" />
+                        <line x1="7" y1="23" x2="25" y2="23" stroke="#3B2314" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
 
-                <h1 class="logoNome">Lume</h1>
+                    <h1 class="logoNome">Lume</h1>
+                </div>
 
 
                 <button class="menu-hamburger" id="btn-mobile" aria-label="Abrir Menu" aria-expanded="false"
@@ -45,6 +47,7 @@
                     <li class="item"><a href="src/pages/cardapio/cardapio.html" class="active">Cardápio</a></li>
                     <li class="item"><a href="src/pages/nossa-historia/nossa-historia.html">Nossa História</a></li>
                     <li class="item"><a href="src/pages/contato/contato.html">Contato</a></li>
+                    <li class="item mobile-login"><a href="src/pages/login/login.html">Login</a></li>
                 </ul>
 
                 <a href="src/pages/login/login.html" class="btn item-btn">Login</a>
@@ -191,6 +194,6 @@
     </main>
 </body>
 
-<script src="components/header/header.js"></script>
+<script src="src/components/header/header.js"></script>
 
 </html>
