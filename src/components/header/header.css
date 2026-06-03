@@ -163,6 +163,10 @@ header {
         text-align: left;
     }
 
+    a.item-btn {
+        display: none;
+    }
+
     .mobile-login {
         display: block;
     }

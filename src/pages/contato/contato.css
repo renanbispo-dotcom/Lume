@@ -57,7 +57,6 @@ body {
 }
 
 .gradient-magenta {
-    border-radius: 2.5625rem;
 background: linear-gradient(90deg, #F9CE34 0%, #EE2A7B 51.44%, #6228D7 100%), linear-gradient(0deg, #EE2A7B 0%, #EE2A7B 100%), #6228D7;
 }
 
