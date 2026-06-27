@@ -1,5 +1,5 @@
 @font-face {
   font-family: 'Noto Sans Georgian';
-  src: url('../assets/fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf') format('truetype');
+  src: url('./NotoSansGeorgian-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: 400;
 }
