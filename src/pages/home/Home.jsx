@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Header from '../../components/Header/Header';
+import Header from '../../components/header/Header';
 import Footer from '../../components/Footer/Footer';
 import seloIcon from '../../assets/images/icons/selo.svg';
 import coracaoIcon from '../../assets/images/icons/coracao.svg';
